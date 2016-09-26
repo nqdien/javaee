@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="true">
+
+    <!-- To save as "ebookshop\WEB-INF\web.xml" -->
+
+    <servlet>
+        <servlet-name>EBookShopQuery</servlet-name>
+        <servlet-class>QueryServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EBookShopQueryMultiValue</servlet-name>
+        <servlet-class>QueryMultiValueServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EBookShopQueryMultiParam</servlet-name>
+        <servlet-class>QueryMultiParamServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EBookShopQueryMultiParamValue</servlet-name>
+        <servlet-class>QueryMultiParamValueServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EshopQuery</servlet-name>
+        <servlet-class>EshopQueryServlet</servlet-class>
+    </servlet>
+    <!-- Note: All <servlet> elements must be placed
+         in front of <servlet-mapping> elements -->
+
+    <servlet-mapping>
+        <servlet-name>EBookShopQuery</servlet-name>
+        <url-pattern>/query</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EBookShopQueryMultiValue</servlet-name>
+        <url-pattern>/querymv</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EBookShopQueryMultiParam</servlet-name>
+        <url-pattern>/querymp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EBookShopQueryMultiParamValue</servlet-name>
+        <url-pattern>/querymvp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EshopQuery</servlet-name>
+        <url-pattern>/eshopquery</url-pattern>
+    </servlet-mapping>
+</web-app>
